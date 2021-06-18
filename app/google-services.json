@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "457198284272",
+    "project_id": "ej4-amigosagendafirebase",
+    "storage_bucket": "ej4-amigosagendafirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457198284272:android:9ee4beb2d5622bebabc135",
+        "android_client_info": {
+          "package_name": "es.miapp.ad.ej4amigosagendafirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457198284272-pljb7p4nv2inh0dqvanru7c8gcge52b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9sl0_nyTcg4vOa1LevA3ku-yvcMICqno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457198284272-pljb7p4nv2inh0dqvanru7c8gcge52b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

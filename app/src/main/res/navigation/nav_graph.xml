@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. ArseneLupin0.
+  ~
+  ~ Licensed under the GNU General Public License v3.0
+  ~
+  ~ https://www.gnu.org/licenses/gpl-3.0.html
+  ~
+  ~ Permissions of this strong copyleft license are conditioned on making available complete source
+  ~ code of licensed works and modifications, which include larger works using a licensed work,
+  ~ under the same license. Copyright and license notices must be preserved. Contributors provide
+  ~ an express grant of patent rights.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_homeFragment">
+    <fragment
+        android:id="@+id/nav_homeFragment"
+        android:name="es.miapp.ad.ej4amigosagendafirebase.view.fragments.Home"
+        android:label="¡Friends!"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_homeFragment_to_exit"
+            app:destination="@id/nav_exitFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_homeFragment_to_friendList"
+            app:destination="@id/nav_listFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_homeFragment_to_importContacts"
+            app:destination="@id/nav_importFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_exitFragment"
+        android:name="es.miapp.ad.ej4amigosagendafirebase.view.fragments.Exit"
+        android:label="Exit"
+        tools:layout="@layout/fragment_exit" />
+    <fragment
+        android:id="@+id/nav_importFragment"
+        android:name="es.miapp.ad.ej4amigosagendafirebase.view.fragments.ImportContacts"
+        android:label="Importar Contactos"
+        tools:layout="@layout/fragment_import_contacts">
+        <action
+            android:id="@+id/action_importContacts_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment"
+
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_nav_importFragment_to_nav_listFragment"
+            app:destination="@id/nav_listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_listFragment"
+        android:name="es.miapp.ad.ej4amigosagendafirebase.view.fragments.FriendList"
+        android:label="Agenda de amigos"
+        tools:layout="@layout/fragment_friend_list">
+        <action
+            android:id="@+id/action_friendList_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment"
+
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_nav_listFragment_to_friendEdit"
+            app:destination="@id/friendEdit" />
+        <action
+            android:id="@+id/action_nav_listFragment_to_nav_homeFragment"
+            app:destination="@id/nav_homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendEdit"
+        android:name="es.miapp.ad.ej4amigosagendafirebase.view.fragments.FriendEdit"
+        android:label="fragment_friend_edit"
+        tools:layout="@layout/fragment_friend_edit">
+        <action
+            android:id="@+id/action_friendEdit_to_nav_listFragment"
+            app:destination="@id/nav_listFragment" />
+    </fragment>
+</navigation>
